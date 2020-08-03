@@ -155,4 +155,48 @@ export const value = [
     title: "逆vipの逆襲 ～DAY36～｜ピカチュウの投げコンボおさらい編",
     eyeCatch: "eyeCatch41.jpg",
   },
+  {
+    title: "逆vipの逆襲 ～DAY37～",
+    eyeCatch: "eyeCatch42.png",
+  },
+  {
+    title: "逆vipの逆襲 ～DAY38～｜ピカチュウで強化キャラに勝つ方法とは",
+    eyeCatch: "eyeCatch43.png",
+  },
+  {
+    title: "逆vipの逆襲 ～DAY39～",
+    eyeCatch: "eyeCatch44.png",
+  },
+  {
+    title: "逆vipの逆襲 ～DAY40～",
+    eyeCatch: "eyeCatch45.png",
+  },
+  {
+    title: "逆vipの逆襲 ～DAY41～|vip間際のピカチュウが掴みを通すためには",
+    eyeCatch: "eyeCatch46.png",
+  },
+  {
+    title: "逆vipの逆襲 ～DAY42～",
+    eyeCatch: "eyeCatch47.png",
+  },
+  {
+    title: "逆vipの逆襲 ～DAY43～",
+    eyeCatch: "eyeCatch48.png",
+  },
+  {
+    title: "逆vipの逆襲 ～DAY44～|ピカチュウ・読み合い入門編",
+    eyeCatch: "eyeCatch49.png",
+  },
+  {
+    title: "逆vipの逆襲 ～DAY45～",
+    eyeCatch: "eyeCatch50.png",
+  },
+  {
+    title: "逆vipの逆襲 ～DAY46～",
+    eyeCatch: "eyeCatch51.png",
+  },
+  {
+    title: "逆vipの逆襲 ～DAY47～|ピカチュウのコンボ中級編",
+    eyeCatch: "eyeCatch52.png",
+  },
 ];

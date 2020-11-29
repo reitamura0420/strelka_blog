@@ -1,1 +1,1 @@
-module.exports = require("C:\\Users\\user\\Documents\\strelka_blog\\src\\utils\\typography")
+module.exports = require("/Users/tamura/Documents/strelka_blog/src/utils/typography")

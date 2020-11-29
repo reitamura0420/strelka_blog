@@ -9,17 +9,29 @@ import Link, {
   navigateTo,
   parsePath,
 } from "gatsby-link"
+import { useScrollRestoration } from "gatsby-react-router-scroll"
 import PageRenderer from "./public-page-renderer"
-import loader from "./loader"
+import loader, { getStaticQueryResults } from "./loader"
 
 const prefetchPathname = loader.enqueue
 
 const StaticQueryContext = React.createContext({})
 
 function StaticQueryDataRenderer({ staticQueryData, data, query, render }) {
+  let combinedStaticQueryData = staticQueryData
+
+  if (process.env.GATSBY_EXPERIMENTAL_LAZY_DEVJS) {
+    // when we remove the flag, we don't need to combine them
+    // w/ changes @pieh made.
+    combinedStaticQueryData = {
+      ...getStaticQueryResults(),
+      ...staticQueryData,
+    }
+  }
+
   const finalData = data
     ? data.data
-    : staticQueryData[query] && staticQueryData[query].data
+    : combinedStaticQueryData[query] && combinedStaticQueryData[query].data
 
   return (
     <React.Fragment>
@@ -57,15 +69,50 @@ const useStaticQuery = query => {
     )
   }
   const context = React.useContext(StaticQueryContext)
-  if (context[query] && context[query].data) {
-    return context[query].data
+
+  // query is a stringified number like `3303882` when wrapped with graphql, If a user forgets
+  // to wrap the query in a grqphql, then casting it to a Number results in `NaN` allowing us to
+  // catch the misuse of the API and give proper direction
+  if (isNaN(Number(query))) {
+    throw new Error(`useStaticQuery was called with a string but expects to be called using \`graphql\`. Try this:
+
+import { useStaticQuery, graphql } from 'gatsby';
+
+useStaticQuery(graphql\`${query}\`);
+`)
+  }
+
+  let queryNotFound = false
+  if (process.env.GATSBY_EXPERIMENTAL_LAZY_DEVJS) {
+    // Merge data loaded via socket.io & xhr
+    // when we remove the flag, we don't need to combine them
+    // w/ changes @pieh made.
+    const staticQueryData = {
+      ...getStaticQueryResults(),
+      ...context,
+    }
+    if (staticQueryData[query]?.data) {
+      return staticQueryData[query].data
+    } else {
+      queryNotFound = true
+    }
   } else {
+    if (context[query]?.data) {
+      return context[query].data
+    } else {
+      queryNotFound = true
+    }
+  }
+
+  if (queryNotFound) {
     throw new Error(
       `The result of this StaticQuery could not be fetched.\n\n` +
         `This is likely a bug in Gatsby and if refreshing the page does not fix it, ` +
         `please open an issue in https://github.com/gatsbyjs/gatsby/issues`
     )
   }
+
+  return null
 }
 
 StaticQuery.propTypes = {
@@ -94,6 +141,7 @@ export {
   push, // TODO replace for v3
   replace, // TODO remove replace for v3
   navigateTo, // TODO: remove navigateTo for v3
+  useScrollRestoration,
   StaticQueryContext,
   StaticQuery,
   PageRenderer,

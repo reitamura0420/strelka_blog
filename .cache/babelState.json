@@ -3,39 +3,53 @@
     "develop": {
       "plugins": [
         {
+          "name": "babel-plugin-lodash",
+          "options": {}
+        },
+        {
           "name": "babel-plugin-styled-components",
           "stage": "develop",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "transpileTemplateLiterals": true,
+            "pure": false,
             "ssr": false
           }
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
           "options": {}
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-numeric-separator\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         }
       ],
       "presets": [
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": []
+            "plugins": [],
+            "isTSX": false,
+            "jsxPragma": "React",
+            "allExtensions": false
           }
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@emotion\\babel-preset-css-prop\\dist\\babel-preset-css-prop.cjs.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
+            "sourceMap": true,
             "autoLabel": false,
-            "plugins": []
+            "plugins": [],
+            "labelFormat": "[local]",
+            "cssPropOptimization": true
           }
         }
       ],
@@ -47,15 +61,19 @@
     "develop-html": {
       "plugins": [
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
+          "name": "babel-plugin-lodash",
           "options": {}
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-numeric-separator\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         },
         {
@@ -63,23 +81,33 @@
           "stage": "develop-html",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "transpileTemplateLiterals": true,
+            "pure": false,
             "ssr": false
           }
         }
       ],
       "presets": [
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": []
+            "plugins": [],
+            "isTSX": false,
+            "jsxPragma": "React",
+            "allExtensions": false
           }
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@emotion\\babel-preset-css-prop\\dist\\babel-preset-css-prop.cjs.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
+            "sourceMap": true,
             "autoLabel": false,
-            "plugins": []
+            "plugins": [],
+            "labelFormat": "[local]",
+            "cssPropOptimization": true
           }
         }
       ],
@@ -91,15 +119,19 @@
     "build-html": {
       "plugins": [
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
+          "name": "babel-plugin-lodash",
           "options": {}
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-numeric-separator\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         },
         {
@@ -107,23 +139,33 @@
           "stage": "build-html",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "transpileTemplateLiterals": true,
+            "pure": false,
             "ssr": true
           }
         }
       ],
       "presets": [
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": []
+            "plugins": [],
+            "isTSX": false,
+            "jsxPragma": "React",
+            "allExtensions": false
           }
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@emotion\\babel-preset-css-prop\\dist\\babel-preset-css-prop.cjs.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
+            "sourceMap": true,
             "autoLabel": false,
-            "plugins": []
+            "plugins": [],
+            "labelFormat": "[local]",
+            "cssPropOptimization": true
           }
         }
       ],
@@ -135,15 +177,19 @@
     "build-javascript": {
       "plugins": [
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-optional-chaining\\lib\\index.js",
+          "name": "babel-plugin-lodash",
           "options": {}
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-nullish-coalescing-operator\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-optional-chaining/lib/index.js",
           "options": {}
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\plugin-proposal-numeric-separator\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-nullish-coalescing-operator/lib/index.js",
+          "options": {}
+        },
+        {
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/plugin-proposal-numeric-separator/lib/index.js",
           "options": {}
         },
         {
@@ -151,23 +197,33 @@
           "stage": "build-javascript",
           "options": {
             "plugins": [],
+            "displayName": true,
+            "fileName": true,
+            "minify": true,
+            "transpileTemplateLiterals": true,
+            "pure": false,
             "ssr": true
           }
         }
       ],
       "presets": [
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@babel\\preset-typescript\\lib\\index.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@babel/preset-typescript/lib/index.js",
           "options": {
-            "plugins": []
+            "plugins": [],
+            "isTSX": false,
+            "jsxPragma": "React",
+            "allExtensions": false
           }
         },
         {
-          "name": "C:\\Users\\user\\Documents\\strelka_blog\\node_modules\\@emotion\\babel-preset-css-prop\\dist\\babel-preset-css-prop.cjs.js",
+          "name": "/Users/tamura/Documents/strelka_blog/node_modules/@emotion/babel-preset-css-prop/dist/babel-preset-css-prop.cjs.js",
           "options": {
-            "sourceMap": false,
+            "sourceMap": true,
             "autoLabel": false,
-            "plugins": []
+            "plugins": [],
+            "labelFormat": "[local]",
+            "cssPropOptimization": true
           }
         }
       ],

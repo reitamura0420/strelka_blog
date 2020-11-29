@@ -1,27 +1,27 @@
 var plugins = [{
-      plugin: require('C:/Users/user/Documents/strelka_blog/node_modules/gatsby-plugin-google-adsense/gatsby-ssr'),
+      plugin: require('/Users/tamura/Documents/strelka_blog/node_modules/gatsby-plugin-google-adsense/gatsby-ssr'),
       options: {"plugins":[],"publisherId":"ca-pub-7262234949336735"},
     },{
-      plugin: require('C:/Users/user/Documents/strelka_blog/node_modules/gatsby-plugin-feed/gatsby-ssr'),
+      plugin: require('/Users/tamura/Documents/strelka_blog/node_modules/gatsby-plugin-feed/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('C:/Users/user/Documents/strelka_blog/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
-      options: {"plugins":[],"name":"chellBlog","short_name":"ちぇる","start_url":"/","background_color":"#ffffff","theme_color":"#663399","display":"minimal-ui","icon":"content/assets/gatsby-icon.png"},
+      plugin: require('/Users/tamura/Documents/strelka_blog/node_modules/gatsby-plugin-manifest/gatsby-ssr'),
+      options: {"plugins":[],"name":"chellBlog","short_name":"ちぇる","start_url":"/","background_color":"#ffffff","theme_color":"#663399","display":"minimal-ui","icon":"content/assets/gatsby-icon.png","legacy":true,"theme_color_in_head":true,"cache_busting_mode":"query","crossOrigin":"anonymous","include_favicon":true,"cacheDigest":"4a9773549091c227cd2eb82ccd9c5e3a"},
     },{
-      plugin: require('C:/Users/user/Documents/strelka_blog/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
+      plugin: require('/Users/tamura/Documents/strelka_blog/node_modules/gatsby-plugin-react-helmet/gatsby-ssr'),
       options: {"plugins":[]},
     },{
-      plugin: require('C:/Users/user/Documents/strelka_blog/node_modules/gatsby-plugin-typography/gatsby-ssr'),
+      plugin: require('/Users/tamura/Documents/strelka_blog/node_modules/gatsby-plugin-typography/gatsby-ssr'),
       options: {"plugins":[],"pathToConfigModule":"src/utils/typography"},
     },{
-      plugin: require('C:/Users/user/Documents/strelka_blog/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
-      options: {"plugins":[]},
+      plugin: require('/Users/tamura/Documents/strelka_blog/node_modules/gatsby-plugin-styled-components/gatsby-ssr'),
+      options: {"plugins":[],"displayName":true,"fileName":true,"minify":true,"transpileTemplateLiterals":true,"pure":false},
     },{
-      plugin: require('C:/Users/user/Documents/strelka_blog/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
-      options: {"plugins":[],"trackingId":"UA-162828926-1"},
+      plugin: require('/Users/tamura/Documents/strelka_blog/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
+      options: {"plugins":[],"trackingId":"UA-162828926-1","head":false,"anonymize":false,"respectDNT":false,"exclude":[],"pageTransitionDelay":0},
     },{
-      plugin: require('C:/Users/user/Documents/strelka_blog/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
-      options: {"plugins":[]},
+      plugin: require('/Users/tamura/Documents/strelka_blog/node_modules/gatsby-plugin-sitemap/gatsby-ssr'),
+      options: {"plugins":[],"output":"/sitemap.xml","createLinkInHead":true},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [

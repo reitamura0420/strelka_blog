@@ -1,12 +1,11 @@
 import React from "react";
 import { Link } from "gatsby";
 
-import { rhythm, scale } from "../utils/typography";
 import styled from "styled-components";
 
-import Category from "../components/Category";
-import Archive from "../components/Archive";
-import Recomend from "../components/Recomend";
+import Category from "../components/category";
+import Archive from "../components/archive";
+import Recomend from "../components/recomend";
 import Bio from "../components/bio";
 import { AdSense } from "../common/adsense";
 import MediaQuery from "react-responsive";
